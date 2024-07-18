@@ -40,3 +40,13 @@ O projeto Plann.er tem como objetivo ajudar o usuário a organizar viagens à tr
 - [ ]  Criar endpoint confirmação de participante **`POST**/participants/{participantId}/confirm`
 - [ ]  Criar endpoint para convidar participante **`POST**/trips/{tripId}/invites`
 - [ ]  Criar endpoint para consultar participantes **`GET**/trips/{tripId}/participants`
+- [ ]  Criar tabela de `Activities`
+- [ ]  Criar entidade que irá representar uma `Activity`
+- [ ]  Criar repository da entidade atividade
+- [ ]  Criar endpoint para cadastro de atividade **`POST**/trips/{tripId}/activities`
+- [ ]  Criar endpoint para consultar atividades de uma viagem **`GET**/trips/{tripId}/invites`
+- [ ]  Criar tabela de `Links`
+- [ ]  Criar entidade que irá representar um `Link`
+- [ ]  Criar repository da entidade links
+- [ ]  Criar endpoint para criação de link **`POST**/trips/{tripId}/links`
+- [ ]  Criar endpoint para consultar links de uma viagem **`GET**/trips/{tripId}/links`
