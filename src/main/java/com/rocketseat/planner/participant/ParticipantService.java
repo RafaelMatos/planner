@@ -18,9 +18,19 @@ public class ParticipantService {
 
         this.repository.saveAll(participants);
 
-        System.out.println(participants.get(0).getId());
+        System.out.println(participants.getFirst().getId());
     }
     public  void triggerConfirmationEmailToParticipants(UUID tripId){
 
+    }
+    public  void triggerConfirmationEmailToParticipant(String email){
+
+    }
+
+    public  ParticipantCreateResponse registerParticipantToTrip(String email,Trip trip){
+        Participant newParticipant = new Participant(email,trip);
+        this.repository.save(newParticipant);
+
+        return  new ParticipantCreateResponse(newParticipant.getId());
     }
 }
