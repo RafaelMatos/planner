@@ -1,9 +1,10 @@
 package com.rocketseat.planner.trip;
 
 
-import com.rocketseat.planner.activities.ActivityRequestPayload;
-import com.rocketseat.planner.activities.ActivityResponse;
-import com.rocketseat.planner.activities.ActivityService;
+import com.rocketseat.planner.activity.ActivityData;
+import com.rocketseat.planner.activity.ActivityRequestPayload;
+import com.rocketseat.planner.activity.ActivityResponse;
+import com.rocketseat.planner.activity.ActivityService;
 import com.rocketseat.planner.participant.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -109,6 +110,13 @@ public class TripController {
         List<ParticipantData> participantList = this.participantService.getAllParticipantsFromTrip(id);
 
         return ResponseEntity.ok(participantList);
+    }
+
+    @GetMapping("/{id}/activities")
+    public ResponseEntity<List<ActivityData>> getAllActivities(@PathVariable UUID id){
+        List<ActivityData> activitiesList = this.activityService.getAllActivitiesFromId(id);
+
+        return ResponseEntity.ok(activitiesList);
     }
 
     @PostMapping("/{id}/activities")
